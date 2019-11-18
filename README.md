@@ -81,3 +81,11 @@ INSERT, UPDATE => 색인 업데이트
 
 자체적 정렬코드가 빠르다 
 편리함보단 효율성
+
+### ESCAPE 옵션 
+jig_igigi@naver.com 찾고 싶으면
+
+WHERE EMAIL LIKE '_ _ _ _%'; (x)
+
+WHERE EMAIL LIKE '_ _ _#_%' ESCAPE '#'(o) 
+
