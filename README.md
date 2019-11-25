@@ -77,6 +77,10 @@ INSERT, UPDATE => 색인 업데이트
 &lt 부등호(<)
 &gt 부등호(>)
 
+### union과 select 여러번
+
+비교
+
 ### order by의 속도를 줄이자
 
 자체적 정렬코드가 빠르다 
