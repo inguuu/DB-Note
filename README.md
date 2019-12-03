@@ -93,3 +93,20 @@ WHERE EMAIL LIKE '_ _ _ _%'; (x)
 
 WHERE EMAIL LIKE '_ _ _#_%' ESCAPE '#'(o) 
 
+
+
+###  WHEREin 
+
+조건에서 어떤거 포함이다.
+Where A = '1 ' AND ~~~ (x)
+A in ('1', '2')
+
+### LEFT OUTER JOIN
+
+SELECT 
+* 
+FROM 테이블1 A
+LEFT OUTER JOIN 테이블2 B
+ON A.no = B. no
+
+
