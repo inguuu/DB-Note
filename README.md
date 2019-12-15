@@ -109,4 +109,5 @@ FROM 테이블1 A
 LEFT OUTER JOIN 테이블2 B
 ON A.no = B. no
 
+### 쿼리는 길다고 나쁜게 아니다
 
