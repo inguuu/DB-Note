@@ -58,6 +58,7 @@ INSERT, UPDATE => 색인 업데이트
 
 # 쿼리 설계 및 Tip
 
+## Group By는 확실히 
 
 ## WHERE 1=1을 쓰자
 
