@@ -95,6 +95,10 @@ WHERE EMAIL LIKE '_ _ _ _%'; (x)
 WHERE EMAIL LIKE '_ _ _#_%' ESCAPE '#'(o) 
 
 
+### UPDATE 문을 잘쓰자!
+
+update 문으로 쿼리를 줄일 수 있다.
+효율적으로 쓰자!
 
 ###  WHEREin 
 
