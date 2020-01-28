@@ -114,5 +114,29 @@ FROM 테이블1 A
 LEFT OUTER JOIN 테이블2 B
 ON A.no = B. no
 
+### Cross Join
+
+크로스 조인은 두개의 테이블에서 CATESIAN PRODUCT 연산의 결과를 출력
+
+CATESIAN PRODUCT란 행과 행의 나열하는 결과를 보여주는 것
+
+A 테이블      B 테이블
+   1             4
+   2             5
+   3             6 
+   
+   크로스 조인시 
+   
+   14 
+   15 
+   16 
+   24
+   25
+   26
+   34 
+   35 
+   36
+
+
 ### 쿼리는 길다고 나쁜게 아니다
 
