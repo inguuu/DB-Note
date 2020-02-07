@@ -78,6 +78,11 @@ INSERT, UPDATE => 색인 업데이트
 &lt 부등호(<)
 &gt 부등호(>)
 
+### 코드값 비교시에는 
+
+ncode = '001' 보다는 ncode <> '001' 을 쓰자! 
+
+
 ### union과 select 여러번
 
 비교
