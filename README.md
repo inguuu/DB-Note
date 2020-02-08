@@ -34,6 +34,23 @@ DB의 효율성을 위한 방법, 쿼리 설계 및 Tip 정리
 
 쿼리 후에 함수를 실행하거나 하는 등의 행위가 가능하다.
 
+## DECODE 
+
+sql 일종의 if - else if - else 문
+
+## 2번째 글짜를 검색조건 
+
+name LIKE '_T%'
+
+## 문자열 함수
+
+UPPER : 대문자
+LOWER : 소문자
+INITCAP : 처음만 대문자
+
+
+
+
 
 
 
