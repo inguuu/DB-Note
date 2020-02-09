@@ -179,3 +179,42 @@ INSERT INTO 변경테이블 SELECT * FROM 기존테이블
 조건이 양수이면 소숫점, 음수이면 정수자리 
 반올림
 버림
+
+
+
+# 쿼리연습 
+
+### WHERE 서브쿼리 
+
+##### SMITH 사원과 같은 부서(deptno)에 근무하는 사원의 empno, ename, deptno를 조회
+
+```
+SELECT empno, ename, deptno FROM EMP 
+WHERE deptno IN (SELECT deptno
+                          FROM EMP 
+                          WHERE ename = 'SMITH');
+```
+
+
+##### JONES 사원보다 급여(sal)가 많은 사원의 empno, ename, sal을 조회하는 
+```
+SELECT empno, ename, sal FROM EMP 
+WHERE sal < (SELECT sal
+                          FROM EMP 
+                          WHERE ename = 'JONES');
+```
+
+##### 	emp 테이블에서 empno, ename, hiredate, hiredate의 요일을 조회
+
+```
+SELECT empno,ename, hiredate TO_CHAR((TO_DATE(hiredate)),'day')
+FROM emp
+```
+
+
+#####  emp 테이블에서 2월에 입사(hiredate)한 사원의 ename, hiredate를 조회.
+```
+SELECT ename,hiredate FROM emp
+    WHERE TO_CHAR(hiredate, ‘MM’) = 02
+```
+
