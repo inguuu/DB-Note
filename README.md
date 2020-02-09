@@ -72,7 +72,6 @@ INSERT, UPDATE => 색인 업데이트
 그래도 `장점이 더 크다!!`
 
 
-
 # 쿼리 설계 및 Tip
 
 ## Group By는 확실히 
@@ -159,6 +158,13 @@ A 테이블      B 테이블
    35 
    36
 
+### interect
+
+공통으로 나오는 하나의 부분을 검색하기위해서 
+
+SELECT igno FROM DEPT
+interect
+SELECT igno FROM EMP
 
 ### 쿼리는 길다고 나쁜게 아니다
 
@@ -167,3 +173,9 @@ A 테이블      B 테이블
 CREATE TO 로 변경테이블을 기존테이블 _ 날짜로 생성
 
 INSERT INTO 변경테이블 SELECT * FROM 기존테이블
+
+## ROUND, TRUNC
+
+조건이 양수이면 소숫점, 음수이면 정수자리 
+반올림
+버림
