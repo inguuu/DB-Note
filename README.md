@@ -188,6 +188,10 @@ SELECT igno FROM EMP
 
 A.idx NOT IN ('007','008','009','010')
 
+### WHERE절에 CASE문 
+CASE WHEN  A.pidx IN ('002','003') THEN '사람'  
+				     ELSE '동물'
+				END group,
 
 ### 백업하는법 
 CREATE TO 로 변경테이블을 기존테이블 _ 날짜로 생성
