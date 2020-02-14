@@ -248,3 +248,11 @@ SELECT ename,hiredate FROM emp
     WHERE TO_CHAR(hiredate, ‘MM’) = 02
 ```
 
+##### 부분 업데이트 
+
+```
+UPDATE St_HMedia
+SET ChargeQtyYN ='Y', ModifyUser ='jig', ModifyDate =GetDate()
+WHERE HReaderNo in (Select HReaderNo From St_ChargeY)
+```
+
