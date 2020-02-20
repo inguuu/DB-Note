@@ -259,4 +259,18 @@ UPDATE St_HMedia
 SET ChargeQtyYN ='Y', ModifyUser ='jig', ModifyDate =GetDate()
 WHERE HReaderNo in (Select HReaderNo From St_ChargeY)
 ```
+##### UNION ALL ORDER BY 사용 
 
+A B 등 쿼리 명칭을 해야 구분을 함 
+
+```
+SELECT * FROM 
+
+(Select TOP 100 * FROM St_HBoard WHERE RegiGu = '지국')A
+
+UNION ALL 
+
+SELECT * FROM 
+
+(Select TOP 100 * FROM St_HBoard WHERE RegiGu != '지국' ORDER BY RegiDate)B
+```
