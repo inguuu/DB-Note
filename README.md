@@ -275,3 +275,26 @@ SELECT * FROM
 
 (Select TOP 100 * FROM St_HBoard WHERE RegiGu != '지국' ORDER BY RegiDate)B
 ```
+
+
+##### UNION ALL ORDER BY 정리
+
+UNION ALL은 합치기 전 두 쿼리에 대해서 정렬을 무시해버린다. 
+
+Select * FROM A ORDER BY A.idx UNION ALL Select * FROM B ORDER BY B.idx (오류)
+
+```
+Select * FROM A ORDER BY A.idx UNION ALL Select * FROM B ORDER BY B.idx (오류)
+
+// 편법으로 바꿔 버리자 
+=> Select * FROM (SELECT * FROM A ORDER BY A.idx) UNION ALL elect * FROM (Select * FROM B ORDER BY B.idx) (성공, mssql 빼고)
+
+// mssql은 위에 쿼리를 인식하지 못한다. 
+
+//TOP, OFFSET 또는 FOR XML을 함께 지정하지 않으면 뷰, 인라인 함수, 파생 테이블, 하위 쿼리 및 공통 테이블 식에서 ORDER BY 절을 사용할 수 없습니다.
+
+// 서브쿼리 부분에 ORDER BY가 있으면 해당 쿼리로 바꿔주자.!!
+SELECT * FROM => SELECT TOP (SELECT count(*) FROM St_HBoard) * 
+
+
+```
