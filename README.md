@@ -97,6 +97,13 @@ INSERT, UPDATE => 색인 업데이트
 
 ncode = '001' 보다는 ncode <> '001' 을 쓰자! 
 
+### char vs varchar 
+
+고정, 가변
+
+EX) 둘 다 10으로 설정시 
+
+char는 나머지를 공백으로 varchar는 가변적으로 
 
 ### union과 select 여러번
 
