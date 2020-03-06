@@ -267,6 +267,26 @@ UPDATE St_HMedia
 SET ChargeQtyYN ='Y', ModifyUser ='jig', ModifyDate =GetDate()
 WHERE HReaderNo in (Select HReaderNo From St_ChargeY)
 ```
+
+
+##### INSERT INTO SELECT + 다른값
+
+```
+INSERT INTO A (
+a,
+b,
+c
+)  
+SELECT 
+B.a,
+입력1,
+Date()
+FROM
+B
+
+입력1과 Date()는 아무 관련 없는값인데 그냥 B Select 조건 조회값에 넣으면 순서대로 알아서 똑똑하게 참,,, 
+
+```
 ##### UNION ALL ORDER BY 사용 
 
 A B 등 쿼리 명칭을 해야 구분을 함 
