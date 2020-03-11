@@ -328,3 +328,16 @@ SELECT * FROM => SELECT TOP (SELECT count(*) FROM St_HBoard) *
 
 
 ```
+##### MSSQL UPDATE SELECT 
+
+
+```
+// 특이하다... ! 
+
+UPDATE A
+ SET A.JobTitle = B.UserJobTitle
+FROM BackDatabase.dbo.DATTACHINFO A, Appro.dbo.ATTACHINFO B
+where A.DocID=B.DocID
+and A.FileSN=B.FileSN 
+
+```
