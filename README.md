@@ -200,7 +200,17 @@ INITCAP : 처음만 대문자
 해당 범위의 문자를 대체할때 좋다.
 
 
+## 날짜 가공 팁 
 
+3번째 인자값에 1~ 넣어주면 정해지 포맷대로 나옴 
+
+SELECT시 사용하기 좋은 경우
+
+CONVERT(VARCHAR,[RegiDate], 20)
+
+INSERT시 사용하기 좋은 경우
+
+CONVERT(VARCHAR,GETDATE(), 1)
 
 ### interect
 
