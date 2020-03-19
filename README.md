@@ -356,7 +356,6 @@ SELECT * FROM => SELECT TOP (SELECT count(*) FROM St_HBoard) *
 ```
 ##### MSSQL UPDATE SELECT 
 
-
 ```
 // 특이하다... ! 
 
