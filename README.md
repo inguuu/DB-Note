@@ -85,6 +85,14 @@ INSERT, UPDATE => 색인 업데이트
 
 쿼리 요청을 생각하자!
 
+## WHERE 비교 >< 
+
+1개와 n개의 차이는 엄청 난다.
+
+10만개 데이터 기준 
+
+Select ~ ~ WHERE Adt >'201001'   - 0.1초
+Select ~ ~ WHERE Adt >'201001' AND Bdt >'201001'   - 2초
 
 
 # 쿼리 설계 및 Tip
