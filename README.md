@@ -227,6 +227,18 @@ INSERT시 사용하기 좋은 경우
 
 CONVERT(VARCHAR,GETDATE(), 1)
 
+## 마지막 날짜
+
+yyyy= 2020 
+mm= 04
+Date(yyyy,mm-1,1)// 2020 04 01
+
+Date(yyyy,mm-1,0)// 2020 03 31 
+
+Date(yyyy,mm,0)// 2020 04 31 // 찾고자하는 마지막 날짜..
+
+
+
 ### interect
 
 공통으로 나오는 하나의 부분을 검색하기위해서 
