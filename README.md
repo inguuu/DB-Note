@@ -381,3 +381,22 @@ where A.DocID=B.DocID
 and A.FileSN=B.FileSN 
 
 ```
+
+##### UPDATE + SELECT + GROUP BY + SUM
+
+```
+ UPDATE [변경 테이블] 
+
+SET
+     [SalePayAmt] = B.SalePayAmt
+
+FROM 
+변경 테이블 A, 
+(SELECT Company,Date,SUM(price) AS price FROM 입금테이블 GROUP BY Company,Date) B
+
+WHERE A.Date = B.Date
+AND A.Company = B.Company 
+AND A.CloseYM ='201606'
+AND A.price != B.price
+
+```
