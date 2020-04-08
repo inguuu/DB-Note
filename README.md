@@ -412,3 +412,27 @@ AND A.CloseYM ='201606'
 AND A.price != B.price
 
 ```
+
+##### SELECT + GROUP BY + SUM
+
+```
+
+SELECT a.BfPAmt, a.totPamt, a.ChargePAmt, a.SalePAmt,
+SUM(b.chargePamt) b_chargepamt, SUM(b.salepamt) b_salepamt, SUM(b.chargepamt+b.salepamt) b_hap,
+ a.totpaamt - (sum(b.chargepamt+b.salepamt))  -a.TotJanAmt cha,
+ a.ChargePAmt+a.SalePAmt - (sum(b.chargepamt+b.salepamt))  as cha2,
+  a.totpayamt - (sum(b.chargepayamt+b.salepayamt))   cha3,
+
+ a.BfPAmt - (SUM(b.chargepamt+b.salepamt)) b_cha
+
+ FROM Mon a, Pay b
+
+WHERE a.YM =  b.YM
+  and a.JCd = b.JCd
+  and a.YM = '202002'
+
+  GROUP BY  a.JCd, a.BfPAmt, a.totpamt, a.ChargePAmt, a.SalePAmt, a.JCd,a.TotJAmt 
+  
+  ORDER BY b_cha, cha, cha2, cha3
+
+```
