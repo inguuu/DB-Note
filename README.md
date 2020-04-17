@@ -222,6 +222,12 @@ INITCAP : 처음만 대문자
 
 해당 범위의 문자를 대체할때 좋다.
 
+## CASE WEHN THEN ELSE END 
+
+SELECT CASE WHEN num <10 THEN 'OK'
+       WHEN num =10 THEN 'Good'
+       ELSE 'Bad' END
+FROM Number 
 
 ## 날짜 가공 팁 
 
