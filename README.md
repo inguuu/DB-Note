@@ -1,4 +1,4 @@
-# DB-Note
+# DB Note
 DB의 효율성을 위한 방법, 쿼리 설계 및 Tip 정리  
 
 
