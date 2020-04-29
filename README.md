@@ -153,6 +153,12 @@ WHERE EMAIL LIKE '_ _ _ _%'; (x)
 
 WHERE EMAIL LIKE '_ _ _#_%' ESCAPE '#'(o) 
 
+### 새 컬럼 추가시 
+
+기존 컬럼을 변경 안하는 선에서 
+
+새 칼럼을 살리자 
+
 
 ### UPDATE 문을 잘쓰자!
 
