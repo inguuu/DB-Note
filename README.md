@@ -172,6 +172,12 @@ update 문으로 쿼리를 줄일 수 있다.
 5000개를 0으로 바꾸기 보단 나머지 10개를 조건을 줘서
 수정하자!
 
+### ORACLE TOP N 방법
+
+SELECT TOP 100 * FROM Table A  
+
+SELECT * FROM Table A WHERE ROWNUM <100 
+
 ###  WHEREin 
 
 조건에서 어떤거 포함이다.
