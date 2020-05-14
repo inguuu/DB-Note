@@ -311,6 +311,8 @@ substr , substring
 
 LPAD , replicate 
 
+instr, charindex
+
 # 쿼리연습 
 
 ### WHERE 서브쿼리 
@@ -468,5 +470,13 @@ WHERE a.YM =  b.YM
   GROUP BY  a.JCd, a.BfPAmt, a.totpamt, a.ChargePAmt, a.SalePAmt, a.JCd,a.TotJAmt 
   
   ORDER BY b_cha, cha, cha2, cha3
+
+```
+
+##### 하나의 컬럼 특정 단어로 잘라서 저장 charindex
+
+```
+A = 123index144444width255555height 
+substring(A, CAST(CHARINDEX('width', A)+4 AS INT), CAST(CHARINDEX('height', A) AS INT) - CAST(CHARINDEX('width', A)+4 AS INT) ) AS 추출컬럼,
 
 ```
