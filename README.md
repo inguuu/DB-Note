@@ -303,6 +303,14 @@ INSERT INTO 변경테이블 SELECT * FROM 기존테이블
 
 자체적인 일련번호를 달 수 도 있다.
 
+# ORACLE, SQL 함수 비교
+
+length , len
+
+substr , substring
+
+LPAD , replicate 
+
 # 쿼리연습 
 
 ### WHERE 서브쿼리 
