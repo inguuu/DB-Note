@@ -295,6 +295,10 @@ INSERT INTO 변경테이블 SELECT * FROM 기존테이블
 반올림
 버림
 
+## sql != 사용불가
+
+단순 한정어(predicate)은 =, <>, >, >=, <, <=, IN, BETWEEN, LIKE, IS NULL 만 사용가능
+
 ## 엑셀 일괄 조건부 서식
 
 =D2:D1001&"**"
